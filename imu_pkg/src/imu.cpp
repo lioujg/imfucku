@@ -66,7 +66,7 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "imu");
     ros::NodeHandle nh;
 
-    ros::Subscriber yaw_sub = nh.subscribe("/mavros/local_position/pose", 1000, optitrack_Callback);
+    ros::Subscriber yaw_sub = nh.subscribe("/vrpn_client_node/RigidBody7/pose", 1000, optitrack_Callback);
     ros::Subscriber acc_angular_vel_sub = nh.subscribe("/mavros/imu/data", 1000, imu_Callback);
 
     ros::spin();
